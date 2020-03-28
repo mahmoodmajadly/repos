@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body{
+            font:bold 14px arial;
+        }
+        fieldset{
+            width:400px;
+            margin-left:auto;
+            margin-right:auto;
+            box-shadow:1px 1px 1px 1px gray;
+
+        }
+        fieldset div div
+        {
+            line-height:30px;
+        }
+        fieldset input
+        {
+            background:#f7f7f7;
+            
+            height:20px;
+
+        }
+        #male {
+            background: #f7f7f7;
+            height: 20px;
+            width: 8px;
+        }
+        
+        fieldset select
+        {
+            height:24px;
+        }
+        fieldset label
+        {
+            display:inline-block;
+            width:80px;
+        }
+        #subbtn{
+            color:#ffffff;
+            background-color:#087aab;
+            border-width:0;
+            height:36px;
+            border-radius:3px;
+            font-weight:700;
+            font-size:14px;
+            width:inherit;
+            cursor:pointer;
+        }
+        #divsubbtn{
+            margin-top:10px;
+            width:120px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <form action="details.aspx" method="get">
+        <fieldset>
+            <legend> פרטים אישיים</legend>
+            <div>
+                <div><label for="fname">שם פרטי</label> <input type="text" name="fname" required /></div>
+                <div> <label for="lname"> שם משפחה </label> <input  type="text" name="lname" required /> </div>
+                <div>
+                    <label for="phone"> טלפון </label> <input  type="text" name="phone" required pattern="[0-9]{7}" />
+                    <select id="telephone" name="prefix">
+                        <option value="050">050</option>
+                        <option value="052">052</option>
+                        <option value="053">053</option>
+                        <option value="054">054</option>
+                    </select>
+                </div>
+                <div> <label for="birthday"> תאריך לידה </label> <input  type="date" name="birth" required /> </div>
+                <div> <label for="uname">שם משתמש  </label> <input type="text" name="uname" required /> </div>
+                <div>
+                    <label for="pass"> סיסמה</label> <input type="password" name="pass" required pattern=".{6,}" />
+                    <br />
+                    <label for="male"> זכר</label>  <input checked="checked"  id="male" type="radio" value="זכר" name="male" />
+                    <label for="female"> נקבה</label>  <input  id="female" type="radio" value="נקבה" name="female" />
+
+                </div>
+            </div>
+        </fieldset>
+        <div id="divsubbtn">
+            <input type="submit" value="שלח" id="subbtn" />
+        </div>
+       
+    </form>
+
+</body>
+</html>
