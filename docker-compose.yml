@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  webapplication5:
-    image: ${DOCKER_REGISTRY-}webapplication5
+  webapplication6:
+    image: ${DOCKER_REGISTRY-}webapplication6
     build:
-      context: .\WebApplication5
+      context: .\WebApplication6
       dockerfile: Dockerfile

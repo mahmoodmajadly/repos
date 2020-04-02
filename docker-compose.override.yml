@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  webapplication5:
+  webapplication6:
     ports:
       - "80"
 networks:
